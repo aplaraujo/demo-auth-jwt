@@ -1,11 +1,12 @@
 package io.github.aplaraujo.enums;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+
+@AllArgsConstructor
+@Getter
 public enum RoleEnum {
     ADMIN("ADMIN"), USER("USER");
 
-    private String role;
-
-    RoleEnum(String role) {
-        this.role = role;
-    }
+    private final String role;
 }
