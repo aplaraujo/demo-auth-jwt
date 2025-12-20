@@ -19,7 +19,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public UserResponseDTO save(UserRequestDTO dto) {
-        User doesTheUserExist = userRepository.findByNameAndLogin(dto.name(), dto.login());
+        User doesTheUserExist = userRepository.findByLogin(dto.login());
         if (doesTheUserExist != null) {
             throw new RuntimeException("This user already exists!");
         }
